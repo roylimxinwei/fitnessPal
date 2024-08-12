@@ -3,13 +3,13 @@ import { ThemedView } from '@/components/ThemedView';
 import React from 'react';
 import { StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
-export default function LoginScreen() {
+export default function SignUpScreen() {
   return (
     <ThemedView style={styles.container}>
       <ThemedView style={styles.formContainer}>
-        <ThemedText type="title" style={styles.heading}>Log In</ThemedText>
+        <ThemedText type="title" style={styles.heading}>Create An Account</ThemedText>
         <ThemedText type="subtitle" style={styles.subheading}>
-          Log in with your account to start tracking your workout and make gains!
+          Create an account to enjoy all the services without any ads for free!
         </ThemedText>
         <TextInput
           style={styles.input}
@@ -22,13 +22,14 @@ export default function LoginScreen() {
           placeholderTextColor="#a0a0a0"
           secureTextEntry
         />
-        <TouchableOpacity style={styles.button} onPress={() => {/* Handle Sign In */}}>
-          <ThemedText style={styles.buttonText}>Sign In</ThemedText>
+        <TouchableOpacity style={styles.button} onPress={() => {/* Handle Sign Up */}}>
+          <ThemedText style={styles.buttonText}>Create Account</ThemedText>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
-          <ThemedText type="link" style={styles.signupText}>Don't Have An Account? <ThemedText type="link">Sign Up</ThemedText></ThemedText>
+        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+          <ThemedText type="link" style={styles.signupText}>
+            Already Have An Account? <ThemedText type="link">Log In</ThemedText>
+          </ThemedText>
         </TouchableOpacity>
-        
       </ThemedView>
     </ThemedView>
   );
